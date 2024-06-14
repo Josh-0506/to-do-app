@@ -27,11 +27,11 @@ while True:
             todos_to_edit = values['todos'][0]
             new_todo = values['todo']
 
-            todo = functions.get_todos()
-            index = todo.index(todos_to_edit)
-            todo[index] = new_todo
-            functions.write_todos(todo)
-            window['todos'].update(values=todo)
+            todos = functions.get_todos()
+            index = todos.index(todos_to_edit)
+            todos[index] = new_todo
+            functions.write_todos(todos)
+            window['todos'].update(values=todos)
         case "sg.WIN_Closed":
             break
 
